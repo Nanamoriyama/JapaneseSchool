@@ -1,4 +1,4 @@
-// FadeInSection.tsx
+"use client";
 import React, { useRef, useState, useEffect } from "react";
 
 interface FadeInSectionProps {
@@ -15,7 +15,8 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({ children }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            observer.unobserve(entry.target); // 1回だけ表示して監視を停止する
+          } else {
+            setIsVisible(false); // 要素がビューポート外に出たときにフェードアウトを再度可能にする
           }
         });
       },

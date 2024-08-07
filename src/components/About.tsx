@@ -4,8 +4,11 @@ import FadeInSection from "./FadeInSection";
 
 const About = () => {
   return (
-    <div className="relative mt-8">
+    <div className="font-raleway relative mt-8">
       <div className="flex flex-col md:flex-col items-center md:items-start md:w-full">
+        <div className="m-8 pt-10 flex justify-center w-full">
+          <div className="text-center text-xl">こんにちは。</div>
+        </div>
         <div className="relative w-full flex justify-between gap-2">
           <div className="flex flex-col md:w-auto">
             <Image
@@ -15,6 +18,13 @@ const About = () => {
               alt="Nana"
               className="object-left-top mt-6 sm:w-[400px] sm:h-[250px] md:w-[480px] md:h-[330px]"
             />
+          </div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 pt-8">
+            初<br />め<br />ま<br />し<br />て<br />
+          </div>
+          <div className="hidden md:block absolute right-[40%] transform -translate-x-1/2 pt-16">
+            宜<br />し<br />く<br />お<br />願<br />い<br />し<br />ま<br />す
+            <br />
           </div>
           <div className="flex flex-col md:w-auto">
             <Image

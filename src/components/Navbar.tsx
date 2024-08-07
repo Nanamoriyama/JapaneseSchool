@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 
 const Navbar: React.FC = () => {
@@ -19,8 +20,8 @@ const Navbar: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-30 bg-transparent">
-      <div className="p-4 flex items-center justify-between ">
+    <div className="font-raleway fixed top-0 left-0 w-full z-30 bg-transparent">
+      <div className="p-4 flex items-center justify-between">
         {/* ブランド名やロゴのプレースホルダー */}
         <div className="text-white font-bold text-lg">{/* Logo */}</div>
         <div>
@@ -44,33 +45,42 @@ const Navbar: React.FC = () => {
           >
             &times;
           </button>
-          <a
-            href="#about"
-            className={`text-white text-2xl font-thin mb-4 transition-all duration-500 hover:text-3xl ${
+          <Link
+            href="/"
+            className={`text-white text-2xl font-thin mb-8 transition-all duration-500 hover:text-3xl ${
+              fadeIn ? "opacity-100" : "opacity-0"
+            }`}
+            onClick={toggleMenu}
+          >
+            Home
+          </Link>
+          <Link
+            href="/#about"
+            className={`text-white text-2xl font-thin mb-8 transition-all duration-500 hover:text-3xl ${
               fadeIn ? "opacity-100" : "opacity-0"
             }`}
             onClick={toggleMenu}
           >
             About
-          </a>
-          <a
-            href="#lessons"
-            className={`text-white text-2xl mb-4 transition-all duration-500 hover:text-3xl ${
+          </Link>
+          <Link
+            href="/#les"
+            className={`text-white text-2xl transition-all mb-8 duration-500 hover:text-3xl ${
               fadeIn ? "opacity-100" : "opacity-0"
             }`}
             onClick={toggleMenu}
           >
             Lessons
-          </a>
-          <a
-            href="#contact"
-            className={`text-white text-2xl transition-all duration-500 hover:text-3xl ${
+          </Link>
+          <Link
+            href="/contact"
+            className={`text-white text-2xl mb-8 transition-all duration-500 hover:text-3xl ${
               fadeIn ? "opacity-100" : "opacity-0"
             }`}
             onClick={toggleMenu}
           >
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </div>

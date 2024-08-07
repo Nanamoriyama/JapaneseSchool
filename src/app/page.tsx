@@ -51,10 +51,14 @@ export default function Home() {
         </FadeInSection>
 
         <FadeInSection>
-          <Les />
+          <div id="les">
+            <Les />
+          </div>
         </FadeInSection>
         <FadeInSection>
-          <About />
+          <div id="about">
+            <About />
+          </div>
         </FadeInSection>
         <FadeInSection>
           <Footer />

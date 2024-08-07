@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative w-full h-auto overflow-hidden bg-transparent">
+    <div className="font-raleway relative w-full h-auto overflow-hidden bg-transparent">
       {/* Video */}
       <div className="relative z-0">
         <video

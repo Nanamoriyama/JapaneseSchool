@@ -1,11 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import FadeInSection from "./FadeInSection";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
-      <div className="bg-slate-800 text-stone-300 min-h-screen flex flex-col justify-between">
+      <div className="font-raleway bg-slate-800 text-stone-300 min-h-screen flex flex-col justify-between">
         <FadeInSection>
           <div className="flex justify-center items-center pt-20">
             <Image
@@ -29,12 +31,21 @@ const Footer = () => {
           <div className="flex flex-col space-y-2 justify-center pr-4 md:pr-10">
             <span className="block">Japanese School Moriyama</span>
             <span className="block">Amsterdam 1014ZP</span>
-            <span className="block">Tel 0614813044</span>
+            <span className="block flex items-center">
+              <FaWhatsapp className="mr-2" />
+              0682103992
+            </span>
           </div>
         </div>
+
         <div className="flex justify-center">
-          <button className="border border-stone-200 p-4">Contact Here</button>
+          <Link href="/contact">
+            <button className="border border-stone-200 p-4">
+              Contact Here
+            </button>
+          </Link>
         </div>
+
         <div className="flex justify-center items-center text-sm p-2">
           <span>©MORIYAMA</span>
         </div>

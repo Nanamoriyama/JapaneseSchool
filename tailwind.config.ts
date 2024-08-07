@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        raleway: ["Raleway", "sans-serif"],
+      },
       animation: {
         "fade-in": "fadeIn 1.5s ease-out",
         "fade-out": "fadeOut 2s ease-out",
