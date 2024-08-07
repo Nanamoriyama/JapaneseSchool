@@ -8,15 +8,17 @@ const Les = () => {
   return (
     <div className="font-raleway p-8 ">
       <div className="flex flex-col md:flex-row md:justify-evenly mb-8 md:pl-10 md:pr-10 md:mt-10">
-        <div className="flex">
-          <Image
-            src="/images/map2.png"
-            width={550}
-            height={450}
-            alt="map"
-            className="w-full h-auto md:w-[600px] md:h-[500px]"
-          />
-        </div>
+        <FadeInSection>
+          <div className="flex">
+            <Image
+              src="/images/map2.png"
+              width={550}
+              height={450}
+              alt="map"
+              className="w-full h-auto md:w-[600px] md:h-[500px]"
+            />
+          </div>
+        </FadeInSection>
 
         <div className="flex flex-col justify-center items-center md:w-1/2 pt-8 md:pt-0">
           <Image

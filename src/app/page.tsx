@@ -46,15 +46,13 @@ export default function Home() {
         }`}
       >
         <Navbar />
-        <FadeInSection>
-          <Hero />
-        </FadeInSection>
 
-        <FadeInSection>
-          <div id="les">
-            <Les />
-          </div>
-        </FadeInSection>
+        <Hero />
+
+        <div id="les">
+          <Les />
+        </div>
+
         <FadeInSection>
           <div id="about">
             <About />
