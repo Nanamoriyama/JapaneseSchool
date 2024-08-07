@@ -15,6 +15,7 @@ const Footer = () => {
               height={280}
               width={280}
               alt=""
+              priority
             />
           </div>
         </FadeInSection>

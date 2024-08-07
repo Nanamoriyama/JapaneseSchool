@@ -60,9 +60,6 @@ export default function Home() {
             <About />
           </div>
         </FadeInSection>
-        <FadeInSection>
-          <Footer />
-        </FadeInSection>
       </div>
     </>
   );
