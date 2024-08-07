@@ -13,6 +13,7 @@ const Hero: React.FC = () => {
           autoPlay
           muted
           loop
+          playsInline
         />
       </div>
 
