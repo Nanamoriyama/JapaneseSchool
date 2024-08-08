@@ -1,50 +1,50 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "@/components/Navbar";
-import Head from "next/head"; // Headコンポーネントをインポート
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Moriyama",
   description: "Japanese School in Amsterdam",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <Head>
-        {/* デフォルトのファビコンとして使用 */}
-        <link rel="icon" href="/images/moriyamalogo.png" />
-        {/* Appleデバイス用のホーム画面アイコン */}
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href={metadata.icons.icon} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/images/moriyamalogo.png"
+          href={metadata.icons.apple}
         />
-        {/* PNG形式のファビコンを指定 */}
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/images/moriyamalogo.png"
+          href={metadata.icons.icon}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/images/moriyamalogo.png"
+          href={metadata.icons.icon}
         />
-        {/* PWA用のウェブアプリマニフェストファイル（存在する場合） */}
         <link rel="manifest" href="/site.webmanifest" />
-        {/* 他のメタデータをここに追加できます */}
-      </Head>
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}
