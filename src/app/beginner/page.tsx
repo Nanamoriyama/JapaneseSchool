@@ -31,17 +31,17 @@ const page = () => {
               </Link>
             </div>
             <div className="text-center pt-8">
-              12 month plan for 480€ 1 Lesson/ 60 minutes
+              12 weeks plan for 480€ 1 Lesson/ 60 minutes
             </div>
             <div className="text-center mt-2">
-              12 month plan for 600€ 1 Lesson/ 90 minutes
+              12 weeks plan for 600€ 1 Lesson/ 90 minutes
             </div>
           </div>
           <div className="bg-stone-300 pb-7 mt-16">
             <div className="flex justify-center pt-10 pb-7">
               <h2 className="text-center">
                 Example of <br />
-                What you will learn for this Beginner 12 month course
+                What you will learn for this Beginner 12 weeks course
               </h2>
             </div>
             <ul className="mt-6 space-y-2 mx-auto w-full max-w-md text-left pl-4">
