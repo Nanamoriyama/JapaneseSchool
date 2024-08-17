@@ -1,7 +1,9 @@
-"use client";
+"use client"; // This enables the component to be a React client-side component
 import { useState, ChangeEvent, FormEvent } from "react";
 
+// Define the ContactForm component
 const ContactForm = () => {
+  // State to store form data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -9,8 +11,11 @@ const ContactForm = () => {
     message: "",
     level: "beginner",
   });
+
+  // State to store the status message after submission
   const [status, setStatus] = useState("");
 
+  // Handle changes in input fields
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
@@ -18,14 +23,15 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  // Handle form submission
   const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent page reload on form submission
     setStatus("Sending...");
 
     // Add the access key to the form data
     const formDataWithAccessKey = {
       ...formData,
-      access_key: "cae00c91-28b6-4c5b-bd6b-fc7f02b82457",
+      access_key: "cae00c91-28b6-4c5b-bd6b-fc7f02b82457", // Replace with your actual access key
     };
 
     try {
@@ -38,6 +44,8 @@ const ContactForm = () => {
         body: JSON.stringify(formDataWithAccessKey),
       });
       const result = await res.json();
+
+      // Update status based on the result of the submission
       if (result.success) {
         setStatus("Message sent successfully!\nありがとうございます。");
       } else {
@@ -98,7 +106,6 @@ const ContactForm = () => {
               placeholder="Phone Number"
               className="p-2 text-base border-b-2 border-stone-800 outline-none bg-transparent backdrop-blur-lg text-white"
             />
-
             <textarea
               name="message"
               value={formData.message}
@@ -113,7 +120,7 @@ const ContactForm = () => {
             >
               Send
             </button>
-            <p className="font-mono text-lg text-green-500 md:text-3xl  whitespace-pre-wrap">
+            <p className="font-mono text-lg text-green-500 md:text-3xl whitespace-pre-wrap">
               {status}
             </p>
           </form>
