@@ -2,13 +2,10 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-
 import About from "../components/About";
 import Les from "../components/Les";
-import Contact from "../components/Footer";
 import LoadingScreen from "../components/LoadingScreen";
 import FadeInSection from "../components/FadeInSection";
-import Footer from "../components/Footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
