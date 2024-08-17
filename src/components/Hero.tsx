@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
       {/* Text */}
       <div className="absolute inset-0 flex items-center justify-center pt-10 text-white z-20">
         <h1 className="text-xl font-thin pt-16 md:pt-20 md:mt-8 md:text-4xl">
-          Japanese Lessons in Amsterdam
+          Japans Leren in Amsterdam
         </h1>
       </div>
     </div>

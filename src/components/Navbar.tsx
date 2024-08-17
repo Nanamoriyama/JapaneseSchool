@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
             }`}
             onClick={toggleMenu}
           >
-            Lessons
+            Cursussen Japans
           </Link>
           <Link
             href="/contact"

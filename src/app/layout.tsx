@@ -2,13 +2,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "@/components/Navbar";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Moriyama",
   description: "Japanese School in Amsterdam",
+  keywords:
+    "japanese lesson amsterdam, japans les, japans docent, japanese teacher amsterdam, japans cursus, japans leren",
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.ico",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
         <link rel="icon" href={metadata.icons.icon} />
         <link
           rel="apple-touch-icon"
@@ -43,7 +45,6 @@ export default function RootLayout({
           sizes="16x16"
           href={metadata.icons.icon}
         />
-        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={inter.className}>
         <Navbar />

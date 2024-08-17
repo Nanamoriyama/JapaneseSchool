@@ -21,30 +21,28 @@ const Les = () => {
         </FadeInSection>
 
         <div className="flex flex-col justify-center items-center md:w-1/2 pt-8 md:pt-0">
-          <Image
-            src="/images/japaneseclasses.png"
-            height={50}
-            width={280}
-            alt="Japanese Classes"
-          />
-          <p className="pt-6 text-center">
-            We offer all Japanese classes on Zoom <br />
-            and on location in Amsterdam.
-          </p>
+          <h1 className="font-serif text-2xl md:text-3xl">
+            Japans Cursussen Volgen
+          </h1>
+          <h2 className="pt-6 text-center">
+            Wij bieden alle Japanse lessen online aan <br />
+            en op locatie in Amsterdam.
+          </h2>
         </div>
       </div>
       <div className="mt-20 mb-10 flex justify-center">
         <Link href="/contact">
           <button className="border border-stone-500 p-4 hover:border-stone-200 hover:bg-stone-900 hover:text-stone-200">
-            Check Free Trial Lesson
+            Gratis Trial Les
           </button>
         </Link>
       </div>
       <div className="text-center mb-8 md:mt-18 md:pt-20">
-        <p className="p-2">Please select your level</p>
-        <p className="text-xs">
-          If you are not sure about your level, <br /> we can check together.
-        </p>
+        <h3 className="p-2">
+          Wij bieden lessen op maat aan, <br />
+          van beginners tot het verbeteren van je conversatie, aangepast aan elk
+          individu.
+        </h3>
       </div>
 
       <div className="flex flex-col md:flex-row justify-around items-center gap-4">

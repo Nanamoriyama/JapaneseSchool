@@ -1,25 +1,33 @@
-import { NextRequest, NextResponse } from "next/server";
-import sgMail from "@sendgrid/mail";
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+export async function POST(request) {
+  const { name, email, message } = await request.json();
 
-export async function POST(req: NextRequest) {
+  // nodemailerトランスポーターの設定
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: email,
+    to: process.env.EMAIL_USER, // あなたのメールアドレス
+    subject: "New Form Submission",
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+  };
+
   try {
-    const { name, email, phone, message, level } = await req.json();
-
-    const msg = {
-      to: "your-email@example.com", // Your email address to receive the form submission
-      from: "no-reply@example.com", // Use your verified SendGrid sender email
-      subject: "New Contact Form Submission",
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nLevel: ${level}\nMessage: ${message}`,
-      html: `<strong>Name:</strong> ${name}<br><strong>Email:</strong> ${email}<br><strong>Phone:</strong> ${phone}<br><strong>Level:</strong> ${level}<br><strong>Message:</strong> ${message}`,
-    };
-
-    await sgMail.send(msg);
-
-    return NextResponse.json({ success: true });
+    await transporter.sendMail(mailOptions);
+    return NextResponse.json(
+      { message: "Email sent successfully" },
+      { status: 200 }
+    );
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ success: false }, { status: 500 });
+    console.error("Error sending email:", error);
+    return NextResponse.json({ error: "Error sending email" }, { status: 500 });
   }
 }
