@@ -27,13 +27,20 @@ const Les = () => {
           <h2 className="pt-6 text-center">
             Wij bieden alle Japanse lessen online aan <br />
             en op locatie in Amsterdam.
+            <br />
+            <br />
+            Ben je dol op anime, of wil je gewoon wat Japans leren voordat je op
+            reis gaat? <br />
+            Iedereen is welkom!
           </h2>
         </div>
       </div>
       <div className="mt-20 mb-10 flex justify-center">
         <Link href="/contact">
-          <button className="border border-stone-500 p-4 hover:border-stone-200 hover:bg-stone-900 hover:text-stone-200">
-            Gratis Trial Les
+          <button className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-mono font-medium tracking-tighter text-black border border-stone-700 bg-white group">
+            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-red-500 rounded-full group-hover:w-56 group-hover:h-56 opacity-30"></span>
+            <span className="absolute inset-0 w-full h-full duration-300 ease-in-out bg-gradient-to-r from-red-600 to-red-800 opacity-50 -translate-x-full group-hover:translate-x-0"></span>
+            <h3 className="relative">Gratis Trial Les</h3>
           </button>
         </Link>
       </div>
@@ -48,7 +55,7 @@ const Les = () => {
       <div className="flex flex-col md:flex-row justify-around items-center gap-4">
         <Link
           href="/beginner"
-          className="relative block text-center mb-4 md:mb-0"
+          className="relative block text-center mb-4 md:mb-0 transform transition-transform duration-300 ease-in-out hover:-translate-y-2"
         >
           <Image
             src="/images/totoro.jpeg"
@@ -65,7 +72,7 @@ const Les = () => {
 
         <Link
           href="/intermediate"
-          className="relative block text-center mb-4 md:mb-0"
+          className="relative block text-center mb-4 md:mb-0 transform transition-transform duration-300 ease-in-out hover:-translate-y-2"
         >
           <Image
             src="/images/mononoke.jpg"
@@ -80,7 +87,10 @@ const Les = () => {
           </div>
         </Link>
 
-        <Link href="/private" className="relative block text-center">
+        <Link
+          href="/private"
+          className="relative block text-center transform transition-transform duration-300 ease-in-out hover:-translate-y-2"
+        >
           <Image
             src="/images/howl.jpeg"
             alt="Private Class"

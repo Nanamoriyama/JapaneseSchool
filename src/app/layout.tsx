@@ -6,10 +6,10 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Moriyama",
-  description: "Japans Cursus in Amsterdam",
-  keywords:
-    "japanese lesson amsterdam, japans les, japans docent, japanese teacher amsterdam, japans cursus, japans leren",
+  title: "Japans Les Moriyama", // ここでタイトルを設定
+  description:
+    "Leer Japans in Amsterdam met Moriyama. Wij bieden persoonlijke Japanse lessen voor alle niveaus, van beginners tot gevorderden. Ontdek de rijke Japanse cultuur en taal met onze ervaren docent.",
+
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.ico",
@@ -27,7 +27,6 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
 
-        <meta name="keywords" content={metadata.keywords} />
         <link rel="icon" href={metadata.icons.icon} />
         <link
           rel="apple-touch-icon"

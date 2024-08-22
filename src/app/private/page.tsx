@@ -6,10 +6,10 @@ const page = () => {
     <>
       <div className="font-raleway">
         <div className="flex justify-center items-center mt-16">
-          <div className="text-4xl text-center">
-            日本語 For <br />
+          <h1 className="text-4xl text-center">
+            Japanese For <br />
             <span className="text-orange-600"> Private Lessons</span>
-          </div>
+          </h1>
         </div>
 
         <div className="mt-10">

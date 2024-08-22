@@ -7,7 +7,7 @@ const page = () => {
       <div className="font-raleway">
         <div className="flex justify-center items-center mt-16">
           <div className="text-4xl text-center">
-            日本語 For <br />
+            Japanese lessons For <br />
             <span className="text-blue-600"> Intermediate Class</span>
           </div>
         </div>
